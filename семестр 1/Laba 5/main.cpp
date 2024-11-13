@@ -1,12 +1,12 @@
 #include <iostream>
 int main () {
-   /* int a, i;
+    int a, i;
     int r=1;
     int n;
     long long m=-9223372036854775808;
 
     std::cin>>i;
-    for(int k=0; i>0; k++)
+    for(int k=0; k<i; k++)
     {
         std::cin>>a;
         if (a%10==2)
@@ -18,7 +18,6 @@ int main () {
                 n=k;
             } 
         } 
-        i--;
     }
     if (r==1)
     {
@@ -29,8 +28,8 @@ int main () {
     std::cout<<"MAX:" << m<<std::endl;
     std::cout<<"highest number:"<<n<<std::endl;
     }
-*/
 
+/*
 int N;
     std::cin >> N;
 
@@ -56,6 +55,8 @@ int N;
         n_digits += 1;
         N /= 10;
     }
+
+    //int ans = std::max(digit0, std::max(digit1, std::max(digit2, std::max(digit3, std::max(digit4, std::max(digit5, std::max(digit6, std::max(digit7, std::max(digit8, digit9)))))))));
     while (n_digits > 0)
     {
         bool digit_found = false;
@@ -72,6 +73,24 @@ int N;
         if (digit_found) break;
         n_digits -= 1;
     }
+    */
     return 0;
+
+    /*int n;
+    std::cin>>n;
+    int digits[12] = {0};
+
+    while (n>0)
+    {
+        digits[n % 10]++;
+        n/=10;
+    }
+    int max = -1;
+    for (int i =0; i<10; i++){
+        if (digits[i]>max) max = digits[i];
+    }
+    std::cout<<max;*/
+    
+
 
 }

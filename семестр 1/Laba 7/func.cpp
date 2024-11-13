@@ -12,7 +12,7 @@ void read(int matrix[N_MAX][N_MAX], int& n)
 }
 
 
-int min_max_number(int matrix[N_MAX][N_MAX], int& n)
+int min_number(int matrix[N_MAX][N_MAX], int n)
 {   int min=100000000;
     for (int i=0; i<n; ++i)
         for (int j=0; j<n;++j)
@@ -20,41 +20,50 @@ int min_max_number(int matrix[N_MAX][N_MAX], int& n)
             if (matrix[i][j]<min)
                 min=matrix[i][j];
         }
-    int max=100000000;
+    return min;
+}
+
+int max_number(int matrix[N_MAX][N_MAX], int n)
+{   
+    int max=-100000000;
     for (int i=0; i<n; ++i)
         for (int j=0; j<n;++j)
         {
             if (matrix[i][j]>max)
                 max=matrix[i][j];
         }
-    return min+max;
+    return max;
 }
 
 
-int row_digit_8(int matrix[N_MAX][N_MAX], int& n)
-{   int row=-1;
-    for (int i=0; i<n; ++i)
+bool row_digit_8(int matrix[N_MAX][N_MAX],int n, int i)
+{  
+    for (int j=0; j<n;++j)
+    {   
+        int k= matrix[i][j];
+        while (k>0)
         {   
-            for (int j=0; j<n;++j)
-            {   
-                while (matrix[i][j]>0)
-                {   
-                    if ((matrix[i][j]%10)==8){row=i;}
-                    matrix[i][j]/=10;
-                }      
-            }
-        }
-    return row;
+            if ((k%10)==8){return true;}
+            k/=10;
+        }      
+    }
+
+    return false;
+
 }
 
-void sort(int matrix[N_MAX][N_MAX],int& n, int row)
+void sort(int matrix[N_MAX][N_MAX],int n, int row)
 {
     for (int i=0; i<n-1;++i)
     {
         for (int j=i+1;j<n;++j)
         {
             if  (matrix[row][i]>matrix[row][j])
-                std::swap(matrix[i], matrix[j]);
+                {
+                    int tmp = matrix[row][i];
+                    matrix[row][i]=matrix[row][j];
+                    matrix[row][j]=tmp;
+                }
         }
     }
 }

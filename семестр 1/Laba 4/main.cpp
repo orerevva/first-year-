@@ -3,16 +3,16 @@
 int main ()
 {
 //1
-// int a,b,c;
-// std::cin >> a>>b>>c;
-// if ((a>b) && (b>c)){
-// std::cout<<(a-b-c)<<std::endl;
-// } else if ((b>a)&& (b%c==0)) {
-// std::cout<<((b/c)+b-a)<<std::endl;
-// }else {
-// std::cout<<(a+b+c)<<std::endl;    
-// }
-
+int a,b,c;
+std::cin >> a>>b>>c;
+if ((a>b) && (b>c)){
+std::cout<<(a-b-c)<<std::endl;
+} else if ((b>a)&& (b%c==0)) {
+std::cout<<((b/c)+b-a)<<std::endl;
+}else {
+std::cout<<(a+b+c)<<std::endl;    
+}
+//setlocale(LC_ALL, "Rus");
 //2
 // int n;
 // std::cin>>n;
@@ -40,14 +40,14 @@ int main ()
 // }
 
 //3
-int x;
-std::cin>>x;
-if (x==1){
-    std::cout<<"Positive number"<<std::endl;
+// int x;
+// std::cin>>x;
+// if (x==1){
+//     std::cout<<"Positive number"<<std::endl;
 
-} else {
-    std::cout<<"Negative number"<<std::endl;
-}
+// } else{
+//     std::cout<<"Negative number"<<std::endl;
+// }
 
 // int x;
 // std::cin>>x;
@@ -59,8 +59,7 @@ if (x==1){
 //     case(1):
 //         std::cout<<"Positive number"<<std::endl;
 //         break;
-//     default:
-//         std::cout<<"Positive number"<<std::endl;
+    
 // }
 return 0;
 
