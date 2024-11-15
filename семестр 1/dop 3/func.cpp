@@ -1,26 +1,30 @@
 #include <iostream>
-#include "func_d3.hpp"
+#include "func.hpp"
 
-//–ø—Ä–æ—á—Ç–µ–Ω–∏–µ —Å—Ç—Ä–æ–∫–∏
+//Ø‡ÆÁ‚•≠®• ·‚‡Æ™®
 void read (int mas[N_MAX],int&n)
 {
-    std::cout<<"–í–≤–µ–¥–∏—Ç–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ —ç–ª–µ–º–µ–Ω—Ç–æ–≤ –ø–æ—Å–ª–µ–¥–æ–≤–∞—Ç–µ–ª—å–Ω–æ—Å—Ç–∏:"<<std::endl;
+    std::cout<<"Ç¢•§®‚• ™Æ´®Á•·‚¢Æ Ì´•¨•≠‚Æ¢ ØÆ·´•§Æ¢†‚•´Ï≠Æ·‚®:"<<std::endl;
     std::cin>>n;
-    std::cout<<"–≤–≤–µ–¥–∏—Ç–µ —ç–ª–µ–º–µ–Ω—Ç—ã –ø–æ—Å–ª–µ–¥–æ–≤–∞—Ç–µ–ª—å–Ω–æ—Å—Ç–∏"<<std::endl;
+    std::cout<<"¢¢•§®‚• Ì´•¨•≠‚Î ØÆ·´•§Æ¢†‚•´Ï≠Æ·‚®"<<std::endl;
     for (int i=0; i<n; ++i)
-        std::cin>>mas[i];
+        {
+            std::cin>>mas[i];
+        }
 }
 
-// —Ä–∞–∑–ª–∏—á–Ω–æ—Å—Ç—å —Ü–∏—Ñ—Ä –≤ —á–∏—Å–ª–µ
+// ‡†ß´®Á≠Æ·‚Ï Ê®‰‡ ¢ Á®·´•
 int var_numbers (int mas[N_MAX], int n)
-{   for (int i=0; i<n;++i)
+{   int ans =0;
+    for (int i=0; i<n;++i)
     {
+        int r=mas[i];
         int digit0 = 0, digit1 = 0, digit2 = 0, digit3 = 0, digit4 = 0,
         digit5 = 0, digit6 = 0, digit7 = 0, digit8 = 0, digit9 = 0;
 
-        while (mas[i] > 0)
+        while (r> 0)
         {
-            switch (mas[i] % 10)
+            switch (r % 10)
             {
                 case 0: digit0 += 1; break;
                 case 1: digit1 += 1; break;
@@ -33,15 +37,15 @@ int var_numbers (int mas[N_MAX], int n)
                 case 8: digit8 += 1; break;
                 case 9: digit9 += 1; break;
             }
-            mas[i] /= 10;
+            r /= 10;
         }
 
-        int ans = std::max(digit0, std::max(digit1, std::max(digit2, std::max(digit3, std::max(digit4, std::max(digit5, std::max(digit6, std::max(digit7, std::max(digit8, digit9)))))))));   
-        return ans;    
+        ans = std::max(digit0, std::max(digit1, std::max(digit2, std::max(digit3, std::max(digit4, std::max(digit5, std::max(digit6, std::max(digit7, std::max(digit8, digit9)))))))));   
     }
+    return ans;    
 }
 
-//—É–¥–∞–ª–µ–Ω–∏–µ —á–∏—Å–ª
+//„§†´•≠®• Á®·´
 void delate_number(int mas[N_MAX],int n)
 {
   int j=0;
@@ -53,23 +57,26 @@ void delate_number(int mas[N_MAX],int n)
     n=j;
 }
 
-//–ø–æ–∏—Å–∫ –ø–∞–ª–∏–Ω–¥—Ä–æ–º–∞ 
+//ØÆ®·™ Ø†´®≠§‡Æ¨† 
 bool palindrom (int mas[N_MAX],int n)
-{
+{   int r;
+    int orig_num;
+    int new_num;
     for (int i=0; i<n; ++i)
     {
-        int orig_num=mas[i];
-        int new_num=0;
-        while (mas[i]>0)
+        r= mas[i];
+        orig_num=mas[i];
+        new_num=0;
+        while (r>0)
         {
-            new_num=new_num*10+mas[i]%10;
-            mas[i]/=10;
+            new_num=new_num*10+r%10;
+            r/=10;
         }
-        return orig_num==new_num;
     }
+    return orig_num==new_num;
 }
 
-//—É–¥–≤–æ–µ–Ω–∏–µ —á–∏—Å–ª–∞
+//„§¢Æ•≠®• Á®·´†
 void double_number (int mas[N_MAX], int n)
 {
     for (int i=0; i<n;++i)
@@ -82,10 +89,10 @@ void double_number (int mas[N_MAX], int n)
 
 }
 
-//–≤—ã–≤–æ–¥
+//¢Î¢Æ§
 void write (int mas[N_MAX],int n)
 {
-    std::cout<<"–ø–æ—Å–ª–µ–¥–æ–≤–∞—Ç–µ–ª—å–Ω–æ—Å—Ç—å:"<<std::endl;
+    std::cout<<"ØÆ·´•§Æ¢†‚•´Ï≠Æ·‚Ï:"<<std::endl;
     for (int i=0;i<n;++i)
         std::cout<<mas[i]<<std::endl;
 }

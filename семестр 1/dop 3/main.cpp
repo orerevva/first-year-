@@ -1,4 +1,4 @@
-#include "func_d3.hpp"
+#include "func.hpp"
 
 int main ()
 {
