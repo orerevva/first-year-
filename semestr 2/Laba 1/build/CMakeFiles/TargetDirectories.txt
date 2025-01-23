@@ -1,0 +1,3 @@
+C:/projekt/semestr 2/Laba 1/build/CMakeFiles/example.dir
+C:/projekt/semestr 2/Laba 1/build/CMakeFiles/ALL_BUILD.dir
+C:/projekt/semestr 2/Laba 1/build/CMakeFiles/ZERO_CHECK.dir
