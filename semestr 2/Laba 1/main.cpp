@@ -7,6 +7,7 @@
     Node* next;
 };
 
+
 void AddBack (Node* sent, int data)
 {
     Node* p = new Node;
@@ -16,6 +17,7 @@ void AddBack (Node* sent, int data)
     sent->prev->next = p;
     sent->prev = p;
 }
+
 
 void Print(Node* sent)
 {
@@ -27,6 +29,7 @@ void Print(Node* sent)
     }
 }
 
+
 void Clear(Node* sent)
 {
     Node*p = sent->next;
@@ -37,6 +40,7 @@ void Clear(Node* sent)
         delete tmp;
     }
 }
+
 
 void Duplicate(Node* sent)
 {
@@ -57,6 +61,7 @@ void Duplicate(Node* sent)
     }
 }
 
+
 bool isPrime(int n)
 {
     if (n <= 1) 
@@ -68,6 +73,7 @@ bool isPrime(int n)
     }
     return true;
 }
+
 
 void Remove(Node* sent)
 {
@@ -86,6 +92,7 @@ void Remove(Node* sent)
     }
 }
 
+
 bool Non_Decreasing(Node* sent) 
 {
     Node* current = sent->next;
@@ -101,6 +108,7 @@ bool Non_Decreasing(Node* sent)
     }
     return true;
 }
+
 
 bool Non_Increasing(Node* sent) 
 {
@@ -118,6 +126,7 @@ bool Non_Increasing(Node* sent)
     }
     return true;
 }
+
 
 int first_D(int n)
 {
@@ -149,6 +158,7 @@ void sort(Node* sent)
         }
     }
 }
+
 
 int main()
 {
