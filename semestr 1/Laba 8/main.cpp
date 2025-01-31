@@ -133,17 +133,16 @@ bool isPalindrome( int n, std::string words[N_MAX])
     return false;
 }
 
-int count_vowels(int n,  std::string words[N_MAX])
-{
-    int vowelCount = 0; 
+float count_vowels(std::string words)
+{  
     std::string vowels = "aeiouyAEIOUY"; 
-    for (int i=0; i<n;++i)
-        for (char c : words[i])
-        {
-            if (vowels.find(c) != std::string::npos) 
-                ++vowelCount; 
-        }
-    return vowelCount;
+    float vowelCount = 0;
+    for (char c : words)
+    {
+        if (vowels.find(c) != std::string::npos) 
+            ++vowelCount; 
+    }
+    return vowelCount/words.length();
 }
 
 void wwrite(int n,std::string words[N_MAX])
@@ -153,18 +152,29 @@ void wwrite(int n,std::string words[N_MAX])
         
 }
 
-void write_1(int vowelCount, int n,  std::string words[N_MAX] )
+void sort (int n, std::string words[N_MAX])
+{
+    for (int i=0; i<n; i++)
+        for (int j=0; j<n; j++)
+    {
+        if (count_vowels(words[i])>count_vowels(words[j]))
+        {
+            std::swap(words[i],words[j]);
+        }
+    }
+}
+
+void write_1(int n, std::string words[N_MAX] )
 { 
-    
     for (int i=0; i<n; i++)
     {
         std::cout<< words[i]<< std::endl;
-        vowelCount--;
-        if (vowelCount <= 0)
-            break; 
+        // vowelCount--;
+        // if (vowelCount <= 0)
+        //     break; 
     }
-
 }
+
 void delete_vowels_double_consonants(int n, std::string words[N_MAX], std::string new_words[N_MAX])
 {
     int k=0;
@@ -201,7 +211,10 @@ int main()
     if (!(Read (n, words)))
         return -1;
     if (isPalindrome (n,words))
-        write_1(count_vowels(n, words), n, words);
+    {
+        sort(n,words);
+        write_1(n, words);
+    }
     else
     {
         delete_vowels_double_consonants(n, words, new_words);
@@ -212,22 +225,6 @@ int main()
 */
 
 //3
-bool Read (int& n, std::string words[N_MAX])
-{
-    std::ifstream in("input3.txt");
-    if (!in.is_open())
-    {
-        std::cerr<<"File error"<<std::endl;
-        return false;
-    }
-    n=0;
-    while (!in.eof())
-    {
-        in>> words[n];
-        n++;
-    }
-    return true;
-}
 
 bool serch_7_letters(std::string word, std::string& unicue)
 {   
@@ -256,11 +253,10 @@ void upper_letters(int n, std::string words[N_MAX], std::string unicue[N_MAX])
         }
 }
 
-void write(int n,std::string words[N_MAX],std::string unique[N_MAX])
+void wwrite(int n,std::string words[N_MAX],std::string unique[N_MAX])
 {
     for (int i=0; i<n; i++)
     {
-        
         if(!unique[i].empty())
         {
             std::cout<<words[i]<<"("<<unique[i]<<")"<<std::endl;
@@ -270,7 +266,80 @@ void write(int n,std::string words[N_MAX],std::string unique[N_MAX])
             std::cout<<words[i]<<std::endl;
         }
     }
+
 }     
+
+void write(int n,std::string words[N_MAX],std::string unique[N_MAX])
+{
+    std::ofstream outFile2("output.txt");
+    if (outFile2.is_open())
+    {
+        for (int i=0; i<n; i++)
+        {
+            if(!unique[i].empty())
+            {
+                outFile2<<words[i]<<"("<<unique[i]<<")" << " ";
+            }
+            else
+            {
+                outFile2<<words[i]<< " ";
+            }
+        }
+    outFile2<<std::endl;
+    }
+
+}
+
+bool Read (int& n, std::string words[N_MAX])
+{
+    std::string unique[N_MAX];
+    std::string line;
+    std::ifstream in("input1.txt");
+    if (!in.is_open())
+    {
+        std::cerr<<"File error"<<std::endl;
+        return false;
+    }
+    
+    std::ofstream outFile2("output.txt");
+    while (std::getline(in, line))
+    { 
+        n=0;
+        std::string s="";
+        line += " ";
+        for(int i=0; i<line.length(); i++)
+        {
+            if (line[i]==' ')
+            {
+                words[n]=s;
+                s="";
+                n++;
+            }
+            else
+            {
+                s+=line[i];
+            }
+        }
+        upper_letters(n,words,unique);
+        if (outFile2.is_open())
+        {
+            for (int i=0; i<n; i++)
+            {
+                if(!unique[i].empty())
+                {
+                    outFile2<<words[i]<<"("<<unique[i]<<")" << " ";
+                }
+                else
+                {
+                    outFile2<<words[i]<< " ";
+                }
+            }
+        outFile2<<std::endl;
+        }
+       
+    }
+    return true;
+}
 
 int main ()
 {
@@ -279,9 +348,6 @@ int main ()
     std::string words[N_MAX];
     if (!(Read (n, words)))
         return -1;
-    upper_letters(n,words,unique);
-    write(n, words, unique);
-
     return 0;
 }
 
