@@ -6,4 +6,4 @@ semestr 1
 2) dop 1-3
 
 semestr 2 
-1) Laba 1 
+1) Laba 1 - 5
