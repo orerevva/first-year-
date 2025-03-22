@@ -1,0 +1,10 @@
+^C:\PROJEKT\C++\SEMESTR 2\LABA 6\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/projekt/c++/semestr 2/Laba 6" "-BC:/projekt/c++/semestr 2/Laba 6/build" --check-stamp-file "C:/projekt/c++/semestr 2/Laba 6/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
