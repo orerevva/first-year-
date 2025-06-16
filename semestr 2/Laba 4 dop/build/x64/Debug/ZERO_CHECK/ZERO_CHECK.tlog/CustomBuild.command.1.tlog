@@ -1,0 +1,10 @@
+^C:\PROJEKT\C++\SEMESTR 2\LABA 4\BUILD\CMAKEFILES\D71C2A0D5789CE115F6DC845516EA164\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/projekt/c++/semestr 2/Laba 4" "-BC:/projekt/c++/semestr 2/Laba 4/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/projekt/c++/semestr 2/Laba 4/build/example.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

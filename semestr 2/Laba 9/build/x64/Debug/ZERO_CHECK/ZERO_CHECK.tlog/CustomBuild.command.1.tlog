@@ -1,6 +1,6 @@
-^C:\PROJEKT\C++\SEMESTR 2\LABA 9\BUILD\CMAKEFILES\A3EBB323C6F7B6004740A62DC094011F\GENERATE.STAMP.RULE
+^C:\USERS\ПОЛИНА\DESKTOP\GIT\FIRST-YEAR-\SEMESTR 2\LABA 9\BUILD\CMAKEFILES\13564C2C1245CCDA88E2AA0F9C1B3061\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/projekt/c++/semestr 2/Laba 9" "-BC:/projekt/c++/semestr 2/Laba 9/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/projekt/c++/semestr 2/Laba 9/build/sfml_sample.sln"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 9" "-BC:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 9/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 9/build/sfml_sample.sln"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

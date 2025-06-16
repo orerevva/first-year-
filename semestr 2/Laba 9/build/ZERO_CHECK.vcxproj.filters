@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\projekt\c++\semestr 2\Laba 9\build\CMakeFiles\a3ebb323c6f7b6004740a62dc094011f\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\Полина\Desktop\git\first-year-\semestr 2\Laba 9\build\CMakeFiles\13564c2c1245ccda88e2aa0f9c1b3061\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{56C59CB9-3CE0-3532-8D65-3B3FEE0AF2ED}</UniqueIdentifier>
+      <UniqueIdentifier>{12F195CE-1E20-3DE9-BF63-98E909CEF96F}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

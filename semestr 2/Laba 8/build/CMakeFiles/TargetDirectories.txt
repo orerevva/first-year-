@@ -1,3 +1,3 @@
-C:/projekt/c++/semestr 2/Laba 8/build/CMakeFiles/sfml_sample.dir
-C:/projekt/c++/semestr 2/Laba 8/build/CMakeFiles/ALL_BUILD.dir
-C:/projekt/c++/semestr 2/Laba 8/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 8/build/CMakeFiles/sfml_sample.dir
+C:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 8/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 8/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\projekt\c++\semestr 2\Laba 9\main.cpp">
+    <ClCompile Include="C:\Users\Полина\Desktop\git\first-year-\semestr 2\Laba 9\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\projekt\c++\semestr 2\Laba 9\game.cpp">
+    <ClCompile Include="C:\Users\Полина\Desktop\git\first-year-\semestr 2\Laba 9\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\projekt\c++\semestr 2\Laba 9\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Полина\Desktop\git\first-year-\semestr 2\Laba 9\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{F1D65D10-CA64-3636-AA68-B044DBD8029D}</UniqueIdentifier>
+      <UniqueIdentifier>{0E6EABEB-41C1-30AE-9AB5-03C4D4C65ED9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

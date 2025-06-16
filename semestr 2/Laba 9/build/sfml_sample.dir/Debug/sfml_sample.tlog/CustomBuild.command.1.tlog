@@ -1,6 +1,6 @@
-^C:\PROJEKT\C++\SEMESTR 2\LABA 9\CMAKELISTS.TXT
+^C:\USERS\ПОЛИНА\DESKTOP\GIT\FIRST-YEAR-\SEMESTR 2\LABA 9\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SC:/projekt/c++/semestr 2/Laba 9" "-BC:/projekt/c++/semestr 2/Laba 9/build" --check-stamp-file "C:/projekt/c++/semestr 2/Laba 9/build/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 9" "-BC:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 9/build" --check-stamp-file "C:/Users/Полина/Desktop/git/first-year-/semestr 2/Laba 9/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
