@@ -55,7 +55,7 @@ std::string getPlayerName(sf::RenderWindow& window, sf::Font& font)
                     if (!playerName.empty())
                         playerName.pop_back();
                 }
-                else if (event.text.unicode == '\r' || event.text.unicode == '\n')
+                else if (event.text.unicode == '\r')
                 {
                     if(!playerName.empty())
                         return playerName;
@@ -99,7 +99,7 @@ bool showGameOverMenu(sf::RenderWindow& window, const ScoreEntry& playerScore, c
         sf::Text text;
         text.setFont(font);
         text.setCharacterSize(28);
-        text.setFillColor(sf::Color::Yellow);
+        text.setFillColor(sf::Color::Magenta);
         text.setString(std::to_string(i + 1) + "." + highScores[i].name + "-" + std::to_string(highScores[i].score));
         text.setPosition(WIDTH / 2 - 120, 180 + i * 35);
         highScoreTexts.push_back(text);
@@ -152,8 +152,10 @@ bool showGameOverMenu(sf::RenderWindow& window, const ScoreEntry& playerScore, c
         window.clear(sf::Color::Black);
         window.draw(title);
         window.draw(scoreText);
-        for(auto& hs : highScoreTexts)
-            window.draw(hs);
+        for (int i = 0; i < highScoreTexts.size(); i++)
+        {
+            window.draw(highScoreTexts[i]);
+        }
         window.draw(playAgain);
         window.draw(exitGame);
         window.display();
